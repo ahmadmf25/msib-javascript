@@ -1,0 +1,29 @@
+<script lang="javascript">
+var angka;
+document.write(`-----------------Angka 1-50---------------`);
+for(angka = 1 ; angka <=50; angka++){
+    document.write(`<br> No.` + angka);
+}
+var bill;
+document.write(`<hr>`);
+document.write(`-----------------Angka 100-50---------------`);
+for(bill = 100 ; bill >=50; bill--){
+    document.write(`<br> No.` + bill);
+}
+let genap;
+document.write(`<hr>`);
+document.write(`-----------------Angka Genap 1-20---------------`);
+for(genap=1; genap<=20; genap++){
+    if(genap % 2 == 0) {
+        document.write(`</br> Bilangan Genap ` + genap)
+    }
+}
+let ganjil;
+document.write(`<hr>`);
+document.write(`-----------------Angka Ganjil 1-10 dikali 2---------------`);
+for(ganjil=1; ganjil<=10; ganjil++) {
+    if(ganjil % 2 == 1) {
+        document.write(`</br> 10 x ${ganjil} = ${10 * ganjil}`);
+    }
+}
+</script>

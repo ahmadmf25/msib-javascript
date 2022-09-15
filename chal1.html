@@ -1,0 +1,25 @@
+<h3 align="center">Daftar Meahasiswa</h3>
+<table align="center" border="1" cellpadding="10" cellspacing="0"
+		    width="40%">
+	<thead>
+		<tr bgcolor="tomato">
+			<th>Nomer</th>
+			<th>Nama</th>
+			<th>Alamat</th>
+		</tr>
+	</thead>
+	<tbody>
+        <script lang="javascript">
+        var no, warna;
+        for(no = 1; no <=100; no++) {
+            warna = (no % 2 == 0 ) ? `yellow` : `aqua`;
+            document.write(`<tr bgcolor="${warna}">
+			<td>${no}</td>
+			<td>Mahasisaw ${no}</td>
+			<td>Jl. Bunga ${no}</td>
+		    </tr>
+            `);
+        }
+        </script>
+	</tbody>
+</table>
