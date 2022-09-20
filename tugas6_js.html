@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menghitung Skala Gempa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 align="center">Data Daerah Gempa</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">NO</th>
+            <th scope="col">Lokasi</th>
+            <th scope="col">Dampak</th>
+          </tr>
+        </thead>
+        <tbody>
+            <script>
+                class Gempa{
+                    constructor(no, lokasi, skala){
+                        this.nomor = no;
+                        this.lokasi = lokasi;
+                        this.skala = skala;
+                    }
+                    dampak(){
+                        if(this.skala <=2) this.dampakGempa = "Tidak Terasa";
+                        if(this.skala > 2 && this.skala <=4) this.dampakGempa = "Bangunan Retak";
+                        if(this.skala > 4 && this.skala <=6) this.dampakGempa = "Bangunan Roboh";
+                        if(this.skala > 6) this.dampakGempa = "Berpotensi Tsunami";
+                        return this.dampakGempa;
+                    }
+                    infoGempa() {
+                        document.write(`
+                        <tr>
+                            <td>${this.nomor}</td>
+                            <td>${this.lokasi}</td>
+                            <td>${this.dampak()}</td>    
+                        </tr>
+                        `);
+                    }
+                }
+                // Membuat Object
+                g1 = new Gempa(1, "Bogor", 1);
+                g2 = new Gempa(2, "Banten", 5);
+                g3 = new Gempa(3, "Sukabumi", 5);
+                g4 = new Gempa(4, "Jakarta", 2);
+                g5 = new Gempa(5, "Tanggerang", 3);
+                g6 = new Gempa(6, "Depok", 3);
+                g7 = new Gempa(7, "Sukasari", 4);
+                g8 = new Gempa(8, "Sumatra Utara", 8);
+                g9 = new Gempa(9, "Sumatra Barat", 8);
+                g10 = new Gempa(10, "Aceh", 8);
+
+                // Mencetak Objet
+                g1.infoGempa();
+                g2.infoGempa();
+                g3.infoGempa();
+                g4.infoGempa();
+                g5.infoGempa();
+                g6.infoGempa();
+                g7.infoGempa();
+                g8.infoGempa();
+                g9.infoGempa();
+                g10.infoGempa();
+            </script>
+        </tbody>
+      </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
